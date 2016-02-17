@@ -1,0 +1,1 @@
+<?php echo $pma->msg_str; ?>

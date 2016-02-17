@@ -1,0 +1,204 @@
+semantics,body {
+	line-height: 150%;
+	background: url('blackjpg.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	color: #EFEFEF;
+}
+
+body::after {
+	content: "";
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.36);
+	z-index: 0;
+}
+
+.list {
+	counter-reset: zishang;
+}
+
+.list li {
+	counter-increment: zishang;
+}
+
+.list li:before {
+	content: counter(zishang);
+	background: rgba(255,255,255,0.3);
+	color: #FFF;
+	padding: 2px;
+	border: #F0F0F0 solid 1px;
+	margin: 1px;
+	font: 1em/100% Arial,Helvetica,sans-serif;
+	border-radius: 5px;
+	line-height: normal;
+	text-align: center;
+	font-weight: bold;
+}
+
+.list li:nth-child(-n+9):before {
+	content: "0" counter(zishang);
+}
+
+.point {
+	font: 14px/100% Arial,Helvetica,sans-serif;
+	line-height: normal;
+	color: #00CCF0;
+}
+
+.date {
+	border: #00CCFF solid thin;
+	border-width: 3px;
+	padding: 10px;
+	border-radius: 10px;
+	font: 18px/100% Arial,Helvetica,sans-serif;
+	line-height: normal;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #48D1CC;
+	position: relative;
+	z-index: 10;
+}
+
+#timeShow {
+	padding: 0 10px;
+	position: relative;
+	z-index: 10;
+	font: 20px/100% Arial,Helvetica,sans-serif;
+	line-height: normal;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #48D1CC;
+}
+
+#user {
+	padding: 0 10px;
+	position: relative;
+	z-index: 10;
+	font: 23px/100% Arial,Helvetica,sans-serif;
+	line-height: normal;
+	margin-left: 2px;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #48D1CC;
+}
+
+.foot,.head {
+	padding: 0 10px;
+	position: relative;
+	z-index: 10;
+	border: #00CCFF solid thin;
+	border-width: 3px;
+	padding: 10px;
+	font-size: 14px;
+	overflow-wrap: break-word;
+	border-radius: 10px;
+}
+#wo-read-content {
+	font-size: 14px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+.content {
+	padding: 0 10px;
+	position: relative;
+	z-index: 10;
+	margin: 0 auto 0 auto;
+	text-align: left;
+	border: #00CCFF solid thin;
+	border-width: 3px;
+	padding: 10px;
+	font-size: 14px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	border-radius: 10px;
+}
+
+.list,.msg{
+line-height: 300%;
+}
+
+a {
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 14px/100% Arial,Helvetica,sans-serif;
+	padding: 0.5em 0.5em 0.55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+	border-radius: 0.5em;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	border: #C2D5E3 solid 1px;
+	margin-left: 3px;
+	line-height: 1.2em;
+	background: rgba(255,255,255,0.2);
+	color: #F0F0F0;
+	-webkit-transition: background linear 0.2s;
+	-moz-transition: background linear 0.2s;
+	transition: background linear 0.2s;
+}
+
+a:active {
+	position: relative;
+	top: 1px;
+}
+
+button,input,textarea {
+	background: rgba(255,255,255,0.5);
+	color:#F9F9F9;
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	padding: 0.5em 0.5em 0.55em;
+	font: 14px/100% Arial,Helvetica,sans-serif;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+	border-radius: 0.5em;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	border: #C2D5E3 solid 1px;
+	margin-left: auto;
+	line-height: 100%;
+}
+
+select {
+	background: rgba(255,255,255,0.4);
+	color:#F9F9F9;
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	padding: 0.5em 0.5em 0.55em;
+	font: 14px/100% Arial,Helvetica,sans-serif;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+	border-radius: 0.5em;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	border: #C2D5E3 solid 1px;
+	margin-left: auto;
+	line-height: 1em;
+	line-height: 100%;
+}
+
+.page_no_link {
+	background: rgba(255,255,255,0.1);
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	padding: 0.5em 0.5em 0.55em;
+	font: 14px/100% Arial,Helvetica,sans-serif;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+	border-radius: 0.5em;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	border: #C2D5E3 solid 1px;
+	margin-left: auto;
+	line-height: 1.2em;
+}
+
+img {
+	/*box-shadow: 0 0 10px #333000;*/
+	max-width: 100%;
+	height: auto;
+}
